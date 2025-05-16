@@ -22,6 +22,9 @@ Since both the publisher and subscriber use exactly the same connection URI, the
 In short, using the same URI means both programs are working with the same messaging infrastructure, which allows reliable communication and data exchange between them.
 
 
+**3. Running RabbitMQ as message broker.**
+![image.png](img\image.png)
+
 
 
 
