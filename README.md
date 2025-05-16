@@ -30,6 +30,16 @@ In short, using the same URI means both programs are working with the same messa
 ![image1.png](img\image1.png)
 
 
+**5. Monitoring chart based on publisher.**
+![image2.png](img\image2.png)
+
+
+When I run the publisher application, I observe a sharp spike in the “messages published per second” metric on the RabbitMQ management dashboard. This surge aligns exactly with the batch of messages sent to the broker in that single execution. Although the queue depth remains at zero, this doesn’t imply that no messages were delivered—it simply means that my consumer was active and immediately consumed the messages, preventing any backlog from forming.
+
+Alongside the publication spike, there’s a corresponding rise in the acknowledgment (ACK) graph, typically shown in purple. These ACKs represent confirmations from the consumer that each message was received and processed. The fact that the ACK line climbs in sync with the publication line clearly indicates that the end-to-end flow is working as intended: messages are published, delivered to the consumer, and acknowledged.
+
+Together, these two visual indicators—one for published messages and one for acknowledgments—provide real-time confirmation that the publisher, RabbitMQ broker, and consumer are all communicating effectively. The broker isn’t just storing messages; it’s actively forwarding them, and the consumers are confirming successful processing.
+
 
 
 
