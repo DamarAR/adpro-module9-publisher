@@ -26,6 +26,9 @@ In short, using the same URI means both programs are working with the same messa
 ![image.png](img\image.png)
 
 
+**4. Sending and processing event**
+![image1.png](img\image1.png)
+
 
 
 
